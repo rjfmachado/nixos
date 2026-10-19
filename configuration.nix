@@ -84,8 +84,17 @@
     nixd
     nil
     lua-language-server
-    libsecret
   ];
+
+  services.displayManager.ly.enable = true;
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   theme = "breeze";
+  #   enableHidpi = true;
+  #   wayland.enable = true;
+  # };
+
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

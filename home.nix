@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   home.username = "ricardo";
@@ -15,6 +15,11 @@
     recursive = true;
     force = true;
   };
+  home.packages = [
+    pkgs.gcr
+  ];
+  services.gnome-keyring.enable = true;
+
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
