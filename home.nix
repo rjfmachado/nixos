@@ -4,6 +4,7 @@
   home.username = "ricardo";
   home.homeDirectory = "/home/ricardo";
   home.stateVersion = "26.05";
+  home.enableNixpkgsReleaseCheck = false;
   home.file.".config/hypr" = {
     source = ./config/hypr;
     recursive = true;
