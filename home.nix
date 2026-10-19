@@ -9,6 +9,11 @@
     recursive = true;
     force = true;
   };
+  home.file.".config/rofi" = {
+    source = ./config/rofi;
+    recursive = true;
+    force = true;
+  };
   programs.fish = {
     enable = true;
     interactiveShellInit = ''

@@ -83,6 +83,7 @@
     msedit
     nixd
     nil
+    lua-language-server
     libsecret
   ];
 
