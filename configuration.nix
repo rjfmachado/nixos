@@ -2,13 +2,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -58,9 +58,9 @@
   users.users."ricardo" = {
     isNormalUser = true;
     description = "Ricardo Machado";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      zed-editor
+    extraGroups = [
+      "networkmanager"
+      "wheel"
     ];
   };
 
@@ -81,6 +81,9 @@
     nautilus
     waybar
     msedit
+    nixd
+    nil
+    libsecret
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -98,13 +101,7 @@
 
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-    '';
-  };
-  
+
   programs.starship = {
     enable = true;
     settings = {
@@ -112,15 +109,18 @@
       # Add your custom Starship settings here
     };
   };
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  
+
   # Filesystems
   fileSystems."/home/ricardo/work" = {
     depends = [
@@ -133,7 +133,7 @@
       "noatime"
     ];
   };
-  
+
   fileSystems."/home/ricardo/dev" = {
     depends = [
       "/home"
@@ -145,7 +145,6 @@
       "noatime"
     ];
   };
-  
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you

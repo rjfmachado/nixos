@@ -18,7 +18,8 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.ricardo = import ./home.nix;
-          };	
+            backupFileExtension = "backup";
+          };
         }
       ];
     };
