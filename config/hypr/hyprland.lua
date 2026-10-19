@@ -18,7 +18,6 @@ hl.monitor({
     scale    = "2",
 })
 
-
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -37,11 +36,11 @@ local menu        = "rofi -show drun"
 
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
---hl.on("hyprland.start", function ()
---hl.exec_cmd(terminal)
---hl.exec_cmd("nm-applet")
---hl.exec_cmd("waybar & hyprpaper")
---end)
+hl.on("hyprland.start", function()
+    -- hl.exec_cmd(terminal)
+    hl.exec_cmd("nm-applet")
+    hl.exec_cmd("waybar & hyprpaper")
+end)
 
 
 -------------------------------
@@ -257,6 +256,7 @@ hl.bind(mainMod .. " + M",
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
@@ -280,6 +280,7 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:mag
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
