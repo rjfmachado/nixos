@@ -81,12 +81,14 @@
     nautilus
     waybar
     msedit
+    seahorse
     nixd
     nil
     lua-language-server
     package-version-server
   ];
 
+  services.gnome.gnome-keyring.enable = true;
   services.displayManager.ly.enable = true;
   # services.displayManager.sddm = {
   #   enable = true;
