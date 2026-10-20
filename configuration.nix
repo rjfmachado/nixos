@@ -84,6 +84,7 @@
     nixd
     nil
     lua-language-server
+    package-version-server
   ];
 
   services.displayManager.ly.enable = true;
