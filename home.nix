@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   home.username = "ricardo";
@@ -15,7 +15,13 @@
     recursive = true;
     force = true;
   };
-
+  home.packages = with pkgs; [
+    adw-gtk3
+    gnome-themes-extra
+    adwaita-qt
+    adwaita-qt6
+    adwaita-fonts
+  ];
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -37,5 +43,12 @@
   };
   programs.zed-editor = {
     enable = true;
+  };
+  gtk = {
+    enable = true;
+    theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
+    };
   };
 }
