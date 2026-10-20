@@ -87,3 +87,7 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({ match = { class = "kitty" }, workspace = 1 })
+hl.window_rule({ match = { class = "firefox" }, workspace = 2 })
+hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3 })

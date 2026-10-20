@@ -6,3 +6,5 @@
 Terminal = "kitty"
 FileManager = "nautilus"
 Menu = "rofi -show drun"
+Browser = "firefox"
+Editor = "zeditor"
