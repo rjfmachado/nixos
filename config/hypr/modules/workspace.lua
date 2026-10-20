@@ -12,9 +12,11 @@
 -- hl.window_rule({
 --     name  = "no-gaps-f1",
 --     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
+--     border_size = 0,++++
 --     rounding    = 0,
 -- })
+
+require("modules.variables")
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -88,6 +90,6 @@ hl.window_rule({
     float = true,
 })
 
-hl.window_rule({ match = { class = "kitty" }, workspace = 1 })
-hl.window_rule({ match = { class = "firefox" }, workspace = 2 })
-hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3 })
+hl.window_rule({ match = { class = Terminal }, workspace = 1 })
+hl.window_rule({ match = { class = Browser }, workspace = 2, fullscreen = true })
+hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3, fullscreen = true })
