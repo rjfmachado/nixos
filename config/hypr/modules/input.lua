@@ -2,6 +2,8 @@
 ---- INPUT ----
 ---------------
 
+require("modules.programs")
+
 hl.config({
     input = {
         kb_layout    = "pt",
