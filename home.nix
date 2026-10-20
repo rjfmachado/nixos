@@ -5,12 +5,12 @@
   home.homeDirectory = "/home/ricardo";
   home.stateVersion = "26.05";
   home.enableNixpkgsReleaseCheck = false;
-  home.file.".config/hypr" = {
+  home.file.".config/hypr/" = {
     source = ./config/hypr;
     recursive = true;
     force = true;
   };
-  home.file.".config/rofi" = {
+  home.file.".config/rofi/" = {
     source = ./config/rofi;
     recursive = true;
     force = true;
