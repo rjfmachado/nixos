@@ -3,6 +3,6 @@
 ---------------------
 
 -- Set programs that you use
-terminal    = "kitty"
-fileManager = "nautilus"
-menu        = "rofi -show drun"
+Terminal = "kitty"
+FileManager = "nautilus"
+Menu = "rofi -show drun"

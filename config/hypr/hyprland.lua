@@ -2,7 +2,7 @@
 -- https://wiki.hypr.land/Configuring/Start/
 
 require("modules.monitors")
-require("modules.programs")
+require("modules.variables")
 require("modules.autostart")
 require("modules.environment")
 require("modules.theme")
