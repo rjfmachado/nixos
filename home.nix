@@ -21,6 +21,7 @@
     adwaita-qt
     adwaita-qt6
     adwaita-fonts
+    fastfetch
   ];
   programs.fish = {
     enable = true;
