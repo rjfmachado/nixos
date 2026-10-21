@@ -52,4 +52,14 @@
       package = pkgs.adw-gtk3;
     };
   };
+
+  # https://wiki.nixos.org/wiki/Automatic_system_upgrades
+  services.home-manager.autoUpgrade = {
+    enable = true;
+    useFlake = true;
+    flakeDir = "/home/ricardo/nixos";
+    frequency = "03:00";
+    preSwitchCommands = [ "nix flake update" ];
+  };
+
 }

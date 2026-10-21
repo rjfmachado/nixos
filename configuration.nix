@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -160,13 +160,15 @@
     ];
   };
 
+  # https://wiki.nixos.org/wiki/Automatic_system_upgrades
   system.autoUpgrade = {
     enable = true;
-    flake = inputs.self.outPath;
+    flake = "/home/ricardo/nixos";
     flags = [
       "-L" # print build logs
+      "--commit-lock-file"
     ];
-    dates = "09:00";
+    dates = "02:00";
     randomizedDelaySec = "45min";
   };
 
