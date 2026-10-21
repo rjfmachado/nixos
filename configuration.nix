@@ -70,24 +70,44 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
+  #
+
   environment.systemPackages = with pkgs; [
-    wget
-    curl
     git
     kitty
     hyprlauncher
     hyprlock
     hyprpaper
+    hypridle
     rofi
     nautilus
     waybar
     msedit
-    nixd
-    nil
-    lua-language-server
-    package-version-server
-    libsecret
+    nixd # needed for Zed lsp
+    nil # needed for Zed lsp
+    lua-language-server # needed for Zed lsp
+    package-version-server # needed for Zed lsp
+    #libsecret
+    #inputs.wallr.packages.${pkgs.stdenv.hostPlatform.system}.wallr
   ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-color-emoji
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    source-han-sans
+    source-han-serif
+  ];
+
+  # xdg.portal = {
+  #   enable = true;
+
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-hyprland
+  #     xdg-desktop-portal-gtk
+  #   ];
+  # };
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
@@ -117,7 +137,12 @@
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
   programs.seahorse.enable = true;
-
+  programs.nix-ld = {
+    enable = true;
+    # libraries = with pkgs; [
+    #   libav
+    # ];
+  };
   programs.starship = {
     enable = true;
     settings = {
