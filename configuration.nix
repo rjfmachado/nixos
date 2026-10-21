@@ -82,16 +82,17 @@
     nautilus
     waybar
     msedit
-    seahorse
     nixd
     nil
     lua-language-server
     package-version-server
+    libsecret
   ];
 
   services.gnome.gnome-keyring.enable = true;
-  services.displayManager.ly.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
+  environment.variables.XDG_RUNTIME_DIR = "/run/user/$UID";
+  services.displayManager.ly.enable = true;
 
   # Manage NixOS generations
   nix.gc = {
@@ -115,6 +116,7 @@
 
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
+  programs.seahorse.enable = true;
 
   programs.starship = {
     enable = true;
