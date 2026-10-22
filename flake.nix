@@ -13,10 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # catppuccin = {
+    #   url = "github:catppuccin/nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
@@ -30,8 +30,12 @@
       nixosConfigurations.flow = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         #specialArgs = { inherit inputs; };
+        specialArgs = {
+          flakeTarget = "flow";
+        };
         modules = [
           ./nixos/configuration.nix
+          ./nixos/hosts/flow
           home-manager.nixosModules.home-manager
           {
             home-manager = {

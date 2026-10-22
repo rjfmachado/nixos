@@ -17,8 +17,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    #flake = "/home/ricardo/nixos";
-    flake = "${flakeTarget}";
+    flake = "/home/ricardo/nixos";
     flags = [
       "-L" # print build logs
       "--commit-lock-file"
