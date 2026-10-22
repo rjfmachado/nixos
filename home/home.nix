@@ -36,6 +36,13 @@
       shell = "fish";
     };
   };
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = false;
+      # Add your custom Starship settings here
+    };
+  };
   programs.git = {
     enable = true;
     settings.user.name = "Ricardo Machado";
