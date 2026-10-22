@@ -3,13 +3,6 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
-    hyprlauncher
-    hyprlock
-    hyprpaper
-    hypridle
-    rofi
-    nautilus
-    waybar
     msedit
     nixd # needed for Zed lsp
     nil # needed for Zed lsp

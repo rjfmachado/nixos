@@ -7,5 +7,6 @@
     nerd-fonts.jetbrains-mono
     source-han-sans
     source-han-serif
+    adwaita-fonts
   ];
 }
