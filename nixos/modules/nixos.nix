@@ -4,6 +4,7 @@
   flakeTarget,
   ...
 }:
+# This fixes Auto Upgrade failing from a flake in my home dir https://wiki.nixos.org/Wiki/Automatic_system_upgrades
 let
   rootGitConfig = pkgs.writeText "root-gitconfig" ''
     [safe]
