@@ -13,6 +13,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    wallpapers = {
+      url = "github:rjfmachado/wallpapers";
+      flake = false;
+    };
+
     # catppuccin = {
     #   url = "github:catppuccin/nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -24,12 +29,11 @@
       nixpkgs,
       home-manager,
       ...
-      #}@inputs:
-    }:
+    }@wallpapers:
     {
       nixosConfigurations.flow = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        #specialArgs = { inherit inputs; };
+        extraSpecialArgs = { inherit wallpapers; };
         specialArgs = {
           flakePath = "/home/ricardo/nixos";
           flakeTarget = "flow";

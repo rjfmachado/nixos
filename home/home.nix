@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, wallpapers, ... }:
 
 {
   imports = [
@@ -13,6 +13,7 @@
     recursive = true;
     force = true;
   };
+  home.file."Pictures/Wallpapers".source = wallpapers;
   home.file.".config/rofi/" = {
     source = ./config/rofi;
     recursive = true;
