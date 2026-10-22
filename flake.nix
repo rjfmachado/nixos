@@ -31,6 +31,7 @@
         system = "x86_64-linux";
         #specialArgs = { inherit inputs; };
         specialArgs = {
+          flakePath = "/home/ricardo/nixos";
           flakeTarget = "flow";
         };
         modules = [

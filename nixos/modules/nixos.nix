@@ -1,7 +1,22 @@
-{ pkgs, flakeTarget, ... }:
+{
+  pkgs,
+  flakePath,
+  flakeTarget,
+  ...
+}:
+let
+  rootGitConfig = pkgs.writeText "root-gitconfig" ''
+    [safe]
+        directory = ${flakePath}
+  '';
+in
 {
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "26.05";
+
+  systemd.tmpfiles.rules = [
+    "L+ /root/.gitconfig - - - - ${rootGitConfig}"
+  ];
 
   # Manage NixOS generations
   nix.gc = {
