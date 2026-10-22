@@ -28,16 +28,17 @@
     {
       nixpkgs,
       home-manager,
+      wallpapers,
       ...
-    }@wallpapers:
+    }:
     {
       nixosConfigurations.flow = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        extraSpecialArgs = { inherit wallpapers; };
         specialArgs = {
           flakePath = "/home/ricardo/nixos";
           flakeTarget = "flow";
         };
+
         modules = [
           ./nixos/configuration.nix
           ./nixos/hosts/flow
@@ -48,6 +49,9 @@
               useUserPackages = true;
               users.ricardo = import ./home/home.nix;
               backupFileExtension = "backup";
+              extraSpecialArgs = {
+                inherit wallpapers;
+              };
             };
           }
         ];

@@ -1,4 +1,8 @@
-{ pkgs, wallpapers, ... }:
+{
+  pkgs,
+  wallpapers,
+  ...
+}:
 
 {
   imports = [

@@ -52,5 +52,15 @@ in
         sudo nixos-rebuild switch --flake .#"${flakeTarget}" "$@"
       '';
     })
+    # (pkgs.writeShellApplication {
+    #   name = "nfu";
+
+    #   runtimeInputs = [ pkgs.nix ];
+
+    #   text = ''
+    #     nix flake update --flake "${flakePath}" "$@"
+    #   '';
+    # })
   ];
+
 }

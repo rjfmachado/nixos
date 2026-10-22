@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792605213,
-        "narHash": "sha256-J73EBU30r2hXvHCcBtaigQDAIu/GGPYk1nc6P9THcmg=",
+        "lastModified": 1792668857,
+        "narHash": "sha256-chUrnAqBhBLvXBUsLFxFYBIl8c0GWp06wdjmAMS8l+U=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ab97a5d09e0f2aa7339cfd35ec5824fd6653e27c",
+        "rev": "cb7de2c7e589afe7531d4832c71ad4df144624ea",
         "type": "github"
       },
       "original": {
@@ -37,7 +37,24 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "wallpapers": "wallpapers"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792690356,
+        "narHash": "sha256-WLmEW+4HvYTa8RIDqU4/N9KFiiG6g5Q7QnXPBfGKumk=",
+        "owner": "rjfmachado",
+        "repo": "wallpapers",
+        "rev": "e638620d6147e5c42e1a0a1435b43397b6136f29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rjfmachado",
+        "repo": "wallpapers",
+        "type": "github"
       }
     }
   },
