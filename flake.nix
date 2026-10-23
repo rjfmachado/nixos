@@ -19,10 +19,20 @@
       flake = false;
     };
 
-    # catppuccin = {
-    #   url = "github:catppuccin/nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+#     fonts-devicons = {
+#       url = "git+https://github.com/devicons/devicon.git?shallow=1";
+#       flake = false;
+#     };
+#
+#     fonts-nerdfonts = {
+#       url = "git+https://github.com/ryanoasis/nerd-fonts.git?shallow=1";
+#       flake = false;
+#     };
+
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
