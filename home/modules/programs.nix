@@ -16,6 +16,7 @@ in
 
   programs.fish = {
     enable = true;
+    package = pkgs-unstable.fish;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
     '';
@@ -23,6 +24,7 @@ in
 
   programs.kitty = {
     enable = true;
+    package = pkgs-unstable.kitty;
     shellIntegration.enableFishIntegration = true;
     settings = {
       shell = "fish";
@@ -31,6 +33,7 @@ in
 
   programs.starship = {
     enable = true;
+    package = pkgs-unstable.starship;
     settings = {
       add_newline = false;
       # Add your custom Starship settings here
@@ -39,6 +42,7 @@ in
 
   programs.git = {
     enable = true;
+    package = pkgs-unstable.git;
     settings.user.name = "Ricardo Machado";
     settings.user.email = "rjfmachado@users.noreply.github.com";
     settings.init.defaultBranch = "main";
