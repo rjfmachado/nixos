@@ -1,5 +1,18 @@
 {
+  pkgs,
+  #config,
+  nixpkgs-unstable,
+  ...
+}:
+let
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    #inherit (config.nixpkgs) config;
+  };
+in
+{
   programs.firefox.enable = true;
+  programs.brave.enable = true;
 
   programs.fish = {
     enable = true;
@@ -33,6 +46,7 @@
 
   programs.zed-editor = {
     enable = true;
+    package = pkgs-unstable.zed-editor;
   };
 
   # programs.nix-ld = {

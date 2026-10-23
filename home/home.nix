@@ -3,7 +3,6 @@
   wallpapers,
   ...
 }:
-
 {
   imports = [
     ./modules/programs.nix

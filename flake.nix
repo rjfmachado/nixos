@@ -2,6 +2,7 @@
   description = "NixOS on Flow";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     # wallr = {
     #   url = "github:programmersd21/wallr/v0.8.3";
@@ -27,6 +28,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       wallpapers,
       ...
@@ -51,6 +53,7 @@
               backupFileExtension = "backup";
               extraSpecialArgs = {
                 inherit wallpapers;
+                inherit nixpkgs-unstable;
               };
             };
           }
