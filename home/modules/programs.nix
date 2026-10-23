@@ -53,6 +53,11 @@ in
     package = pkgs-unstable.zed-editor;
   };
 
+  programs.gThumb = {
+    enable = true;
+    package = pkgs-unstable.gthumb;
+  };
+
   # programs.nix-ld = {
   #   enable = true;
   #   # libraries = with pkgs; [
