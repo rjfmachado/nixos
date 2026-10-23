@@ -1,13 +1,11 @@
 {
   pkgs,
-  #config,
   nixpkgs-unstable,
   ...
 }:
 let
   pkgs-unstable = import nixpkgs-unstable {
     inherit (pkgs.stdenv.hostPlatform) system;
-    #inherit (config.nixpkgs) config;
   };
 in
 {
@@ -51,11 +49,6 @@ in
   programs.zed-editor = {
     enable = true;
     package = pkgs-unstable.zed-editor;
-  };
-
-  programs.gThumb = {
-    enable = true;
-    package = pkgs-unstable.gthumb;
   };
 
   # programs.nix-ld = {

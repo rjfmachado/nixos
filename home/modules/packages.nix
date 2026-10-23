@@ -1,15 +1,13 @@
 {
   pkgs,
-  #config,
-  #nixpkgs-unstable,
+  nixpkgs-unstable,
   ...
 }:
-# let
-#   pkgs-unstable = import nixpkgs-unstable {
-#     inherit (pkgs.stdenv.hostPlatform) system;
-#     #inherit (config.nixpkgs) config;
-#   };
-# in
+let
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+  };
+in
 {
 home.packages = with pkgs; [
   adw-gtk3
@@ -17,6 +15,6 @@ home.packages = with pkgs; [
   adwaita-qt
   adwaita-qt6
   fastfetch
-  nixpgks-unstable.gthumb
+  pkgs-unstable.gthumb
 ];
 }

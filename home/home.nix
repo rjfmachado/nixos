@@ -1,11 +1,11 @@
 {
-  pkgs,
   wallpapers,
   ...
 }:
 {
   imports = [
     ./modules/programs.nix
+    ./modules/packages.nix
   ];
   home.username = "ricardo";
   home.homeDirectory = "/home/ricardo";
@@ -22,13 +22,6 @@
     recursive = true;
     force = true;
   };
-  home.packages = with pkgs; [
-    adw-gtk3
-    gnome-themes-extra
-    adwaita-qt
-    adwaita-qt6
-    fastfetch
-  ];
 
   # https://wiki.nixos.org/wiki/Automatic_system_upgrades
   services.home-manager.autoUpgrade = {
@@ -38,5 +31,4 @@
     frequency = "03:00";
     preSwitchCommands = [ "nix flake update" ];
   };
-
 }
