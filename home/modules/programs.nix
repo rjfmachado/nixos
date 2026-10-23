@@ -10,7 +10,7 @@ let
 in
 {
   programs.firefox.enable = true;
-  programs.brave.enable = true;
+  #programs.brave.enable = true;
 
   programs.fish = {
     enable = true;

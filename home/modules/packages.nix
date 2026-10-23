@@ -16,5 +16,6 @@ home.packages = with pkgs; [
   adwaita-qt6
   fastfetch
   pkgs-unstable.gthumb
+  pkgs-unstable.brave-origin
 ];
 }
