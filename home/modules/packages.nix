@@ -17,5 +17,7 @@ home.packages = with pkgs; [
   fastfetch
   pkgs-unstable.gthumb
   pkgs-unstable.brave-origin
+  pkgs-unstable.awww
+  pkgs-unstable.hyprsunset
 ];
 }
