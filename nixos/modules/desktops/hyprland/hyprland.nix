@@ -1,15 +1,21 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
+let
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+  };
+in
 {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    package = pkgs-unstable.hyprland;
+  };
+
   environment.systemPackages = with pkgs; [
-    #hyprlauncher
-    hyprlock
-    hyprpaper
-    hypridle
-    rofi
+    pkgs-unstable.hyprlock
+    pkgs-unstable.hyprpaper
+    pkgs-unstable.hypridle
     nautilus
-    #waybar
-    wayle
-    imv
+    pkgs-unstable.wayle
+    papirus-icon-theme
   ];
 }

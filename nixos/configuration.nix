@@ -8,6 +8,5 @@
     ./modules/nixos.nix
     ./modules/system-packages.nix
     ./modules/fonts.nix
-    #./modules/fonts.nix
   ];
 }

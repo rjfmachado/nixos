@@ -1,0 +1,61 @@
+@import "catppuccin-mocha"
+
+/* Keep your existing working Catppuccin Mocha import above this. */
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+window {
+    width: 600px;
+    location: north;
+    anchor: north;
+    y-offset: 12px;
+
+    border: 1px;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 10px;
+}
+
+inputbar {
+    children: [ entry ];
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+entry {
+    placeholder: "Search applications...";
+    cursor: text;
+}
+
+listview {
+    columns: 1;
+    lines: 5;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 3px;
+}
+
+element {
+    orientation: horizontal;
+    padding: 7px 9px;
+    spacing: 10px;
+    border-radius: 6px;
+}
+
+element-icon {
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    vertical-align: 0.5;
+    cursor: inherit;
+}

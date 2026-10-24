@@ -51,6 +51,26 @@ in
     package = pkgs-unstable.zed-editor;
   };
 
+  programs.rofi = {
+    enable = true;
+    package = pkgs-unstable.rofi;
+
+    # Only the application launcher is enabled.
+    modes = [ "drun" ];
+
+    # Load our custom layout.
+    #theme = "launcher";
+
+    extraConfig = {
+      show-icons = true;
+      icon-theme = "Papirus";
+      drun-display-format = "{name}";
+      display-drun = "Applications";
+      disable-history = false;
+      sort = true;
+    };
+  };
+
   # programs.nix-ld = {
   #   enable = true;
   #   # libraries = with pkgs; [

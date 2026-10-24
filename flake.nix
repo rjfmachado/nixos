@@ -40,6 +40,7 @@
         specialArgs = {
           flakePath = "/home/ricardo/nixos";
           flakeTarget = "flow";
+          inherit nixpkgs-unstable;
         };
         modules = [
           ./nixos/configuration.nix
