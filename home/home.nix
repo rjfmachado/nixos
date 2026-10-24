@@ -15,6 +15,7 @@
     enable = true;
     flavor = "mocha";
     brave.enable = true;
+    chromium.enable = true;
     hyprland.enable = true;
     hyprlock.enable = true;
     hyprtoolkit.enable = true;

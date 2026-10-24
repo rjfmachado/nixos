@@ -2,7 +2,7 @@ configuration{
     mode: ["drun", "window", "run"];
     icon-theme: "Papirus-Dark";
     show-icons: true;
-    terminal: "alacritty";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -18,4 +18,4 @@ configuration{
     kb-remove-char-back: "BackSpace";
     kb-mode-complete: "Control+o";
 }
-@theme "tokyonight.rasi"
+#@theme "tokyonight.rasi"
