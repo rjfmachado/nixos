@@ -6,5 +6,5 @@
 Terminal = "kitty"
 FileManager = "nautilus"
 Menu = "rofi -show drun"
-Browser = "firefox"
+Browser = "brave-origin"
 Editor = "zeditor"

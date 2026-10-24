@@ -74,8 +74,6 @@
               "notifications"
               "weather"
               "clock"
-              "power"
-
             ];
           } # this is a 'list' of 'attribute sets', no semi-colons after the closing braces needed
         ];
