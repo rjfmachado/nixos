@@ -19,16 +19,6 @@
       flake = false;
     };
 
-#     fonts-devicons = {
-#       url = "git+https://github.com/devicons/devicon.git?shallow=1";
-#       flake = false;
-#     };
-#
-#     fonts-nerdfonts = {
-#       url = "git+https://github.com/ryanoasis/nerd-fonts.git?shallow=1";
-#       flake = false;
-#     };
-
     catppuccin = {
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +31,7 @@
       nixpkgs-unstable,
       home-manager,
       wallpapers,
+      catppuccin,
       ...
     }:
     {
@@ -50,10 +41,10 @@
           flakePath = "/home/ricardo/nixos";
           flakeTarget = "flow";
         };
-
         modules = [
           ./nixos/configuration.nix
           ./nixos/hosts/flow
+          catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -64,6 +55,7 @@
               extraSpecialArgs = {
                 inherit wallpapers;
                 inherit nixpkgs-unstable;
+                inherit catppuccin;
               };
             };
           }

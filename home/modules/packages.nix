@@ -18,6 +18,7 @@ home.packages = with pkgs; [
   pkgs-unstable.gthumb
   pkgs-unstable.brave-origin
   pkgs-unstable.awww
+  pkgs-unstable.wallust
   pkgs-unstable.hyprsunset
 ];
 }

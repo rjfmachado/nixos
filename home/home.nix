@@ -1,12 +1,30 @@
 {
   wallpapers,
+  catppuccin,
   ...
 }:
 {
   imports = [
     ./modules/programs.nix
     ./modules/packages.nix
+    catppuccin.homeModules.catppuccin
   ];
+
+  catppuccin = {
+    accent = "sky";
+    enable = true;
+    flavor = "mocha";
+    brave.enable = true;
+    hyprland.enable = true;
+    hyprlock.enable = true;
+    hyprtoolkit.enable = true;
+    kitty.enable = true;
+    rofi.enable = true;
+    starship.enable = true;
+    zed.enable = true;
+    gtk.icon.enable = true;
+  };
+
   home.username = "ricardo";
   home.homeDirectory = "/home/ricardo";
   home.stateVersion = "26.05";
@@ -16,6 +34,7 @@
     recursive = true;
     force = true;
   };
+
   home.file."Pictures/Wallpapers".source = wallpapers;
   home.file.".config/rofi/" = {
     source = ./config/rofi;
@@ -37,7 +56,7 @@
 
     # Whether to automatically install soft dependencies used by wayle that
     # will be required based on your config.
-    autoInstallDependencies = true;
+    autoInstallDependencies = false;
 
     # tip: you can automatically translate your TOML config to Nix by running
     # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)' | nixfmt
@@ -70,7 +89,6 @@
               #"network"
               "bluetooth"
               "volume"
-              "microphone"
               "notifications"
               "weather"
               "clock"
@@ -92,6 +110,22 @@
           icon-bg-color = "transparent";
           icon-color = "status-info";
         };
+        media = {
+          icon-type = "application-mapped";
+
+          player-icons = {
+            "*spotify*" = "si-spotify-symbolic";
+            "*brave*" = "si-spotify-symbolic";
+            "*chromium*" = "si-spotify-symbolic";
+          };
+
+          player-priority = [
+            "*spotify*"
+            "*brave*"
+            "*chromium*"
+          ];
+
+        };
         weather = {
           location = "Ericeira";
           units = "metric";
@@ -103,7 +137,10 @@
         hyprsunset = {
           label-show = false;
         };
-        microphone = {
+        idle-inhibit = {
+          label-show = false;
+        };
+        volume = {
           label-show = false;
         };
         notifications = {
