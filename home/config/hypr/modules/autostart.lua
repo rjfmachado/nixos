@@ -10,7 +10,8 @@
 require("modules.variables")
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd(Terminal)
-    hl.exec_cmd("nm-applet")
-    hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("wayle panel start")
+    -- hl.exec_cmd(Terminal)
+    -- hl.exec_cmd("nm-applet")
+    -- hl.exec_cmd("hyprpaper")
 end)

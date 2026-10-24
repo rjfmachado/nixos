@@ -92,6 +92,9 @@ hl.window_rule({
 
 hl.window_rule({ match = { class = Terminal }, workspace = 1 })
 hl.window_rule({ match = { class = Browser }, workspace = 2 })
+hl.window_rule({ match = { class = "brave-origin" }, workspace = 2 })
 hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3 })
+
+
 --hl.window_rule({ match = { class = Browser }, workspace = 2, fullscreen = true })
 --hl.window_rule({ match = { class = "dev.zed.Zed" }, workspace = 3, fullscreen = true })
