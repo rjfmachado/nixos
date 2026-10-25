@@ -1,16 +1,16 @@
 {
   # Filesystems
-  fileSystems."/home/ricardo/work" = {
-    depends = [
-      "/home"
-    ];
-    device = "/dev/disk/by-uuid/d396e2b5-1536-42f0-a021-92fcf2e81bdb";
-    fsType = "ext4";
-    options = [
-      "defaults"
-      "noatime"
-    ];
-  };
+  # fileSystems."/home/ricardo/work" = {
+  #   depends = [
+  #     "/home"
+  #   ];
+  #   device = "/dev/disk/by-uuid/d396e2b5-1536-42f0-a021-92fcf2e81bdb";
+  #   fsType = "ext4";
+  #   options = [
+  #     "defaults"
+  #     "noatime"
+  #   ];
+  # };
 
   fileSystems."/home/ricardo/dev" = {
     depends = [
