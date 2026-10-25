@@ -1,6 +1,10 @@
+@theme "catppuccin-default"
+
+@import "catppuccin-mocha"
+
 window {
-    location: north;
-    anchor: north;
+    location: center;
+    anchor: center;
     width: 600px;
     y-offset: 12px;
 }
