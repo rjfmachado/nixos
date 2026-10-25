@@ -1,23 +1,13 @@
 {
-  description = "NixOS on Flow";
+  description = "NixOS";
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-26.05";
+
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-    # wallr = {
-    #   url = "github:programmersd21/wallr/v0.8.3";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     home-manager = {
-      #url = "github:nix-community/home-manager/release-26.05";
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
-
-      # extensions = [
-      #     { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
-      #     { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
-      #   ];
     };
 
     wallpapers = {
@@ -25,12 +15,15 @@
       flake = false;
     };
 
-    # catppuccin = {
-    #   url = "github:catppuccin/nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -40,6 +33,7 @@
       home-manager,
       wallpapers,
       #catppuccin,
+      #stylix,
       ...
     }:
     {
@@ -54,6 +48,7 @@
           ./nixos/configuration.nix
           ./nixos/hosts/flow
           #catppuccin.nixosModules.catppuccin
+          #stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager = {

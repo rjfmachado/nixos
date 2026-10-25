@@ -61,7 +61,7 @@
 
     # Whether to automatically install soft dependencies used by wayle that
     # will be required based on your config.
-    autoInstallDependencies = true;
+    autoInstallDependencies = false;
 
     # tip: you can automatically translate your TOML config to Nix by running
     # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)' | nixfmt

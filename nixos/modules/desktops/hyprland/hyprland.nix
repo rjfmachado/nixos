@@ -16,6 +16,8 @@ in
     pkgs-unstable.hypridle
     nautilus
     pkgs-unstable.wayle
+    pkgs-unstable.awww
+    pkgs-unstable.wallust
     papirus-icon-theme
     #papirus-nord
   ];
