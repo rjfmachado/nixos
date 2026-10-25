@@ -55,13 +55,8 @@ in
     enable = true;
     package = pkgs-unstable.rofi;
 
-    # Only the application launcher is enabled.
-    modes = [ "drun" ];
-
-    # Load our custom layout.
-    #theme = "launcher";
-
-    extraConfig = {
+    settings = {
+      modes = [ "drun" ];
       show-icons = true;
       icon-theme = "Papirus";
       drun-display-format = "{name}";
@@ -70,10 +65,4 @@ in
       sort = true;
     };
   };
-
-  # programs.nix-ld = {
-  #   enable = true;
-  #   # libraries = with pkgs; [
-  #   # ];
-  # };
 }

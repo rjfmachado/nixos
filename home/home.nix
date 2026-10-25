@@ -22,6 +22,7 @@
     hyprtoolkit.enable = true;
     kitty.enable = true;
     rofi.enable = true;
+    #rofi.flavor = "latte";
     starship.enable = true;
     zed.enable = true;
     gtk.icon.enable = true;
@@ -38,13 +39,13 @@
     force = true;
   };
 
-  home.file."Pictures/Wallpapers".source = wallpapers;
+  home.file.".config/rofi/" = {
+    source = ./config/rofi;
+    recursive = true;
+    force = true;
+  };
 
-  # home.file.".config/rofi/" = {
-  #   source = ./config/rofi;
-  #   recursive = true;
-  #   force = true;
-  # };
+  home.file."Pictures/Wallpapers".source = wallpapers;
 
   # https://wiki.nixos.org/wiki/Automatic_system_upgrades
   services.home-manager.autoUpgrade = {

@@ -1,0 +1,36 @@
+window {
+    location: north;
+    anchor: north;
+    width: 600px;
+    y-offset: 12px;
+}
+
+mainbox {
+    spacing: 8px;
+    padding: 12px;
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 8px;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 4px;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+}
+
+element-icon {
+    size: 24px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
