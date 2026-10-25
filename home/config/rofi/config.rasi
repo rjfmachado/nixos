@@ -2,11 +2,35 @@
 
 @import "catppuccin-mocha"
 
+configuration{
+    mode: ["drun", "window", "run"];
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    display-drun: " ";
+    display-run: " ";
+    display-window: " ";
+
+    //kb-accept-entry: "Return,KP_Enter";
+
+    //fixing up
+    //kb-remove-to-eol: "";
+    //kb-remove-char-back: "BackSpace";
+    //kb-mode-complete: "Control+o";
+}
+
 window {
     location: center;
     anchor: center;
     width: 600px;
     y-offset: 12px;
+
+    border: 2px;
+    border-radius: 4px;
 }
 
 mainbox {
@@ -29,6 +53,8 @@ listview {
 element {
     padding: 8px;
     spacing: 8px;
+
+    children: [ element-icon, element-text ];
 }
 
 element-icon {

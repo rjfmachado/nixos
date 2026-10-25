@@ -17,5 +17,6 @@ in
     nautilus
     pkgs-unstable.wayle
     papirus-icon-theme
+    #papirus-nord
   ];
 }

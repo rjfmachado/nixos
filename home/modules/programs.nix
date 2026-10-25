@@ -54,15 +54,5 @@ in
   programs.rofi = {
     enable = true;
     package = pkgs-unstable.rofi;
-
-    settings = {
-      modes = [ "drun" ];
-      show-icons = true;
-      icon-theme = "Papirus";
-      drun-display-format = "{name}";
-      display-drun = "Applications";
-      disable-history = false;
-      sort = true;
-    };
   };
 }
