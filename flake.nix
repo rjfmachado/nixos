@@ -10,8 +10,14 @@
     # };
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      #url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
+
+      # extensions = [
+      #     { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+      #     { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
+      #   ];
     };
 
     wallpapers = {
@@ -19,10 +25,12 @@
       flake = false;
     };
 
-    catppuccin = {
-      url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # catppuccin = {
+    #   url = "github:catppuccin/nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+
   };
 
   outputs =
@@ -31,7 +39,7 @@
       nixpkgs-unstable,
       home-manager,
       wallpapers,
-      catppuccin,
+      #catppuccin,
       ...
     }:
     {
@@ -45,7 +53,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/hosts/flow
-          catppuccin.nixosModules.catppuccin
+          #catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -56,7 +64,7 @@
               extraSpecialArgs = {
                 inherit wallpapers;
                 inherit nixpkgs-unstable;
-                inherit catppuccin;
+                #inherit catppuccin;
               };
             };
           }

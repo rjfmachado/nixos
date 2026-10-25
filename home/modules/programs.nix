@@ -9,8 +9,10 @@ let
   };
 in
 {
-  programs.firefox.enable = true;
-  #programs.brave.enable = true;
+  programs.brave = {
+    enable = true;
+    package = pkgs-unstable.brave-origin;
+  };
 
   programs.fish = {
     enable = true;
@@ -49,6 +51,13 @@ in
   programs.zed-editor = {
     enable = true;
     package = pkgs-unstable.zed-editor;
+    extensions = [ "nix" "lua" "toml" "rust" "nvim-nightfox" "catppuccin" "tokyo-night" "github-theme"];
+    theme = {
+      mode = "system";
+      dark = "Duskfox - blurred";
+      light = "Dawnfox - blurred";
+    };
+    hour_format = "hour24";
   };
 
   programs.rofi = {

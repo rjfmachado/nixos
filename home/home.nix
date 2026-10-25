@@ -1,37 +1,37 @@
 {
   wallpapers,
-  catppuccin,
+  #catppuccin,
   ...
 }:
 {
   imports = [
     ./modules/programs.nix
     ./modules/packages.nix
-    catppuccin.homeModules.catppuccin
+    #catppuccin.homeModules.catppuccin
   ];
 
-  catppuccin = {
-    accent = "sky";
-    autoEnable = true;
-    enable = true;
-    flavor = "mocha";
-    brave.enable = true;
-    chromium.enable = true;
-    hyprland.enable = true;
-    hyprlock.enable = true;
-    hyprtoolkit.enable = true;
-    kitty.enable = true;
-    rofi.enable = true;
-    #rofi.flavor = "latte";
-    starship.enable = true;
-    zed.enable = true;
-    gtk.icon.enable = true;
-  };
+  # catppuccin = {
+  #   accent = "blue";
+  #   autoEnable = true;
+  #   enable = true;
+  #   flavor = "macchiato";
+  #   #brave.enable = true;
+  #   #chromium.enable = true;
+  #   #hyprland.enable = true;
+  #   #hyprlock.enable = true;
+  #   #hyprtoolkit.enable = true;
+  #   kitty.enable = true;
+  #   #rofi.enable = true;
+  #   #rofi.flavor = "latte";
+  #   #starship.enable = true;
+  #   #zed.enable = true;
+  #   #gtk.icon.enable = true;
+  # };
 
   home.username = "ricardo";
   home.homeDirectory = "/home/ricardo";
   home.stateVersion = "26.05";
-  home.enableNixpkgsReleaseCheck = false;
+  #home.enableNixpkgsReleaseCheck = false;
 
   home.file.".config/hypr/" = {
     source = ./config/hypr;
@@ -39,11 +39,11 @@
     force = true;
   };
 
-  home.file.".config/rofi/" = {
-    source = ./config/rofi;
-    recursive = true;
-    force = true;
-  };
+  # home.file.".config/rofi/" = {
+  #   source = ./config/rofi;
+  #   recursive = true;
+  #   force = true;
+  # };
 
   home.file."Pictures/Wallpapers".source = wallpapers;
 
@@ -61,7 +61,7 @@
 
     # Whether to automatically install soft dependencies used by wayle that
     # will be required based on your config.
-    autoInstallDependencies = false;
+    autoInstallDependencies = true;
 
     # tip: you can automatically translate your TOML config to Nix by running
     # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)' | nixfmt
@@ -110,11 +110,11 @@
         bluetooth = {
           label-show = false;
         };
-        dashboard = {
-          border-color = "transparent";
-          icon-bg-color = "transparent";
-          icon-color = "status-info";
-        };
+        # dashboard = {
+        #   border-color = "transparent";
+        #   icon-bg-color = "transparent";
+        #   icon-color = "status-info";
+        # };
         media = {
           icon-type = "application-mapped";
 
@@ -155,25 +155,25 @@
       osd = {
         monitor = "HDMI-A-1";
       };
-      styling = {
-        palette = {
-          bg = "#1e1e2e";
-          surface = "#313244";
-          elevated = "#45475a";
-
-          fg = "#cdd6f4";
-          fg-muted = "#a6adc8";
-
-          primary = "#cba6f7";
-
-          red = "#f38ba8";
-          yellow = "#f9e2af";
-          green = "#a6e3a1";
-          blue = "#89b4fa";
-        };
+       styling = {
+#         palette = {
+#           bg = "#1e1e2e";
+#           surface = "#313244";
+#           elevated = "#45475a";
+#
+#           fg = "#cdd6f4";
+#           fg-muted = "#a6adc8";
+#
+#           primary = "#cba6f7";
+#
+#           red = "#f38ba8";
+#           yellow = "#f9e2af";
+#           green = "#a6e3a1";
+#           blue = "#89b4fa";
+#         };
         # wallust will be automatically installed if this is set
-        #theme-provider = "wallust";
-        theme-provider = "wayle";
+        theme-provider = "wallust";
+        #theme-provider = "wayle";
       };
       # the following wallpaper option can be omitted if you're not using
       # wayle's wallpaper engine
