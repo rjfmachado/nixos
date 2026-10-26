@@ -8,7 +8,7 @@ in
   services.hypridle = {
     enable = true;
     package = pkgs-unstable.hypridle;
-
+    systemdTarget = "hyprland-session.target";
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock";
