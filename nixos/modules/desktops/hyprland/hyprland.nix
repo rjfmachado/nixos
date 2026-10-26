@@ -17,5 +17,6 @@ in
     pkgs-unstable.wallust
     pkgs-unstable.wl-clipboard-rs
     papirus-icon-theme
+    pkgs-unstable.rofimoji
   ];
 }

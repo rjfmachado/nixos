@@ -104,7 +104,7 @@
       };
       modules = {
         clock = {
-          format = "%H:%M";
+          format = "🕛 %H:%M 🗓️ %d/%m";
           dropdown-show-seconds = false;
           icon-show = false;
         };

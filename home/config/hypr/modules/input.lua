@@ -57,6 +57,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(Editor))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(Browser))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofimoji"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
