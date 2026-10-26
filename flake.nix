@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.2.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wallpapers = {
       url = "github:rjfmachado/wallpapers";
       flake = false;
@@ -31,6 +36,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      lanzaboote,
       wallpapers,
       #catppuccin,
       #stylix,
@@ -47,6 +53,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/hosts/flow
+          lanzaboote.nixosModules.lanzaboote
           #catppuccin.nixosModules.catppuccin
           #stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
