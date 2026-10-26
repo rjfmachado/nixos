@@ -1,6 +1,14 @@
 {
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader = {
+    timeout = 5;
+
+    systemd-boot = {
+      enable = true;
+      editor = false;
+      configurationLimit = 10;
+    };
+
+    efi.canTouchEfiVariables = true;
+  };
 }
