@@ -2,8 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     git
-    kitty
+    #kitty
     msedit
+    ripgrep
+    libnotify
     nixd # needed for Zed lsp
     nil # needed for Zed lsp
     lua-language-server # needed for Zed lsp
