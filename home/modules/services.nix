@@ -1,8 +1,13 @@
-{ pkgs, ... }:
-
+{ pkgs, nixpkgs-unstable, ... }:
+let
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+  };
+in
 {
   services.hypridle = {
     enable = true;
+    package = pkgs-unstable.hypridle;
 
     settings = {
       general = {
@@ -30,5 +35,8 @@
     };
   };
 
-  programs.hyprlock.enable = true;
+  programs.hyprlock = {
+    enable = true;
+    package = pkgs-unstable.hyprlock;
+  };
 }

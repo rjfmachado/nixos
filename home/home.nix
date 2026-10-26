@@ -7,6 +7,7 @@
   imports = [
     ./modules/programs.nix
     ./modules/packages.nix
+    ./modules/services.nix
     #catppuccin.homeModules.catppuccin
   ];
 
@@ -155,22 +156,22 @@
       osd = {
         monitor = "HDMI-A-1";
       };
-       styling = {
-#         palette = {
-#           bg = "#1e1e2e";
-#           surface = "#313244";
-#           elevated = "#45475a";
-#
-#           fg = "#cdd6f4";
-#           fg-muted = "#a6adc8";
-#
-#           primary = "#cba6f7";
-#
-#           red = "#f38ba8";
-#           yellow = "#f9e2af";
-#           green = "#a6e3a1";
-#           blue = "#89b4fa";
-#         };
+      styling = {
+        #         palette = {
+        #           bg = "#1e1e2e";
+        #           surface = "#313244";
+        #           elevated = "#45475a";
+        #
+        #           fg = "#cdd6f4";
+        #           fg-muted = "#a6adc8";
+        #
+        #           primary = "#cba6f7";
+        #
+        #           red = "#f38ba8";
+        #           yellow = "#f9e2af";
+        #           green = "#a6e3a1";
+        #           blue = "#89b4fa";
+        #         };
         # wallust will be automatically installed if this is set
         theme-provider = "wallust";
         #theme-provider = "wayle";
