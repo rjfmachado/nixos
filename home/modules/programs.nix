@@ -29,6 +29,10 @@ in
     settings = {
       shell = "fish";
     };
+    extraConfig = ''
+      copy_on_select clipboard
+      mouse_map right press ungrabbed paste_from_clipboard
+    '';
   };
 
   programs.starship = {
