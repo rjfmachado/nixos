@@ -32,6 +32,8 @@ in
     extraConfig = ''
       copy_on_select clipboard
       mouse_map right press ungrabbed paste_from_clipboard
+      #url_color #89b4fa
+      url_style dashed
     '';
   };
 
