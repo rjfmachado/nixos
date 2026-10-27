@@ -1,8 +1,15 @@
 {
   wallpapers,
+  pkgs,
+  nixpkgs-unstable,
   #catppuccin,
   ...
 }:
+let
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+  };
+in
 {
   imports = [
     ./modules/programs.nix
@@ -59,7 +66,7 @@
 
   services.wayle = {
     enable = true;
-
+    package = pkgs-unstable.wayle;
     # Whether to automatically install soft dependencies used by wayle that
     # will be required based on your config.
     autoInstallDependencies = false;
@@ -190,4 +197,5 @@
       };
     };
   };
+
 }
