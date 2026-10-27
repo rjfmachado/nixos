@@ -36,7 +36,7 @@ in
     flake = "/home/ricardo/nixos";
     flags = [
       "-L" # print build logs
-      "--commit-lock-file"
+      #"--commit-lock-file"
     ];
     dates = "02:00";
     randomizedDelaySec = "45min";
