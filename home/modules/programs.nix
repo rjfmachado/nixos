@@ -12,6 +12,10 @@ in
   programs.brave = {
     enable = true;
     package = pkgs-unstable.brave-origin;
+
+    commandLineArgs = [
+      "--password-store=gnome-libsecret"
+    ];
   };
 
   programs.fish = {
