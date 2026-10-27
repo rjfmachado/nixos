@@ -157,6 +157,7 @@
         monitor = "HDMI-A-1";
       };
       styling = {
+        #theme-provider = "wayle";
         #         palette = {
         #           bg = "#1e1e2e";
         #           surface = "#313244";
@@ -174,7 +175,7 @@
         #         };
         # wallust will be automatically installed if this is set
         theme-provider = "wallust";
-        #theme-provider = "wayle";
+        wallust-apply-globally = false;
       };
       # the following wallpaper option can be omitted if you're not using
       # wayle's wallpaper engine
