@@ -33,7 +33,7 @@ in
 
   system.autoUpgrade = {
     enable = true;
-    flake = "/home/ricardo/nixos";
+    flake = "/home/ricardo/nixos#flow";
     flags = [
       "-L" # print build logs
       #"--commit-lock-file"
