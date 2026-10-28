@@ -13,9 +13,9 @@ in
     enable = true;
     package = pkgs-unstable.brave-origin;
 
-    commandLineArgs = [
-      "--password-store=gnome-libsecret"
-    ];
+    # commandLineArgs = [
+    #   "--password-store=gnome"
+    # ];
   };
 
   programs.fish = {
