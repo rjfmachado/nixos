@@ -3,6 +3,7 @@
     ./boot.nix
     ./hardware-configuration.nix
     ./kernel.nix
+    ./graphics.nix
     ./file-systems.nix
     ./networking.nix
     ../../modules/services/keyring.nix
