@@ -62,7 +62,6 @@ in
             monitor = "*";
             show = true;
             left = [
-              "dashboard"
               "hyprland-workspaces"
             ];
             center = [
@@ -78,6 +77,7 @@ in
               "notifications"
               "weather"
               "clock"
+              "dashboard"
             ];
           }
         ];
