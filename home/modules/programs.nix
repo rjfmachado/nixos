@@ -64,6 +64,11 @@ in
     enableFishIntegration = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
+    config.global = {
+      hide_env_diff = true;
+      log_format = "-";
+      log_filter = "^$";
+    };
   };
 
   programs.zed-editor = {
