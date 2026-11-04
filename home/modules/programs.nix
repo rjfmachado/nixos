@@ -79,11 +79,16 @@ in
       "lua"
       "toml"
       "rust"
-      "nvim-nightfox"
-      "catppuccin"
-      "tokyo-night"
-      "github-theme"
+      "just"
+      "dockerfile"
       "git-firefly"
+      "make"
+      #"catppuccin"
+      #"tokyo-night"
+      "github-theme"
+      #"vscode-dark-modern"
+      #"jetbrains-themes"
+      #"zedokai"
     ];
     userSettings = {
       theme = {
