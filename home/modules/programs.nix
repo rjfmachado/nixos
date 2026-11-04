@@ -91,6 +91,11 @@ in
       "zedokai"
     ];
     userSettings = {
+      terminal = {
+        shell = {
+          program = "fish";
+        };
+      };
       theme = {
         mode = "system";
         dark = "GitHub Dark";
