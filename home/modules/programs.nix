@@ -58,6 +58,14 @@ in
     settings.init.defaultBranch = "main";
   };
 
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   programs.zed-editor = {
     enable = true;
     package = pkgs-unstable.zed-editor;

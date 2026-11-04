@@ -9,15 +9,17 @@ let
   };
 in
 {
-home.packages = with pkgs; [
-  adw-gtk3
-  gnome-themes-extra
-  adwaita-qt
-  adwaita-qt6
-  fastfetch
-  pkgs-unstable.gthumb
-  #pkgs-unstable.awww
-  #pkgs-unstable.wallust
-  pkgs-unstable.hyprsunset
-];
+  home.packages = with pkgs; [
+    adw-gtk3
+    gnome-themes-extra
+    adwaita-qt
+    adwaita-qt6
+    fastfetch
+    pkgs-unstable.gthumb
+    #pkgs-unstable.awww
+    #pkgs-unstable.wallust
+    pkgs-unstable.hyprsunset
+    pkgs-unstable.devenv
+    pkgs-unstable.direnv
+  ];
 }
