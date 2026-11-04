@@ -84,8 +84,9 @@ in
       theme = {
         mode = "system";
         dark = "GitHub Light";
-        light = "GiHhub Dark";
+        light = "GitHub Dark";
       };
+      format_on_save = "modifications_if_available";
       cli_default_open_behavior = "new_window";
       tab_bar = {
         show_nav_history_buttons = true;
