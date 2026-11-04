@@ -55,7 +55,7 @@ in
       bar = {
         background-opacity = 50;
         bg = "transparent";
-        scale = 0.5;
+        scale = 0.6;
         shadow = "drop";
         layout = [
           {
