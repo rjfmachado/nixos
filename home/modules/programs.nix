@@ -83,8 +83,8 @@ in
     userSettings = {
       theme = {
         mode = "system";
-        dark = "GitHub Light";
-        light = "GitHub Dark";
+        dark = "GitHub Dark";
+        light = "GitHub Light";
       };
       format_on_save = "modifications_if_available";
       cli_default_open_behavior = "new_window";
