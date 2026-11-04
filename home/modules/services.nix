@@ -27,9 +27,9 @@ in
           on-timeout = "loginctl lock-session";
         }
 
-        # Turn off the monitors after 5 minutes.
+        # Turn off the monitors after 10 minutes.
         {
-          timeout = 300;
+          timeout = 600;
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
         }
