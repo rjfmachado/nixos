@@ -78,14 +78,24 @@ in
       "catppuccin"
       "tokyo-night"
       "github-theme"
+      "git-firefly"
     ];
     userSettings = {
       theme = {
         mode = "system";
-        dark = "Github Light";
-        light = "Github Dark";
+        dark = "GitHub Light";
+        light = "GiHhub Dark";
       };
-      hour_format = "hour24";
+      cli_default_open_behavior = "new_window";
+      tab_bar = {
+        show_nav_history_buttons = true;
+        show = false;
+      };
+      title_bar = {
+        button_layout = "platform_default";
+        show_menus = false;
+        show_user_menu = true;
+      };
     };
   };
 
