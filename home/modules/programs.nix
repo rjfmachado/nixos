@@ -83,12 +83,12 @@ in
       "dockerfile"
       "git-firefly"
       "make"
-      #"catppuccin"
-      #"tokyo-night"
+      "catppuccin"
+      "tokyo-night"
       "github-theme"
-      #"vscode-dark-modern"
-      #"jetbrains-themes"
-      #"zedokai"
+      "vscode-dark-modern"
+      "jetbrains-themes"
+      "zedokai"
     ];
     userSettings = {
       theme = {
